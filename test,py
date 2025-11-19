@@ -1,0 +1,64 @@
+# 1) Find common elements between two lists 
+
+list1 = [1,2,3]
+list2 = [2,3,5]
+common = list(set(list1) & set(list2))
+print(common)
+
+
+
+# 2) Count word frequency in a sentence 
+
+sen = "there is a cat and a dog"
+words = sen.split()
+count = {}
+for w in words:
+	count[w] = count.get(w,0)+1
+print(count)
+
+
+
+
+# 3) Transpose a matrix
+
+matrix = [[1,2,3],[4,5,6]]
+transpose = [[matrix[j][i] for j in range(len(matrix))] for i in range(len(matrix[0]))]
+print(transpose)
+
+
+
+
+# 4) Write a program that reverses the order of words in a string.
+
+a = "a cat and a dog"
+w = a.split()
+print("The Strings are: ",w)
+reve = w[::-1]
+print(reve)
+
+
+
+# 5) Write a Python program that removes duplicates from a list without using set(), while preserving the original order.
+
+list = [4,1,2,2,3,3,4,5]
+unique = []
+for l in list:
+	if l not in unique:
+		unique.append(l)
+print(unique)
+
+
+
+
+# 6) Given a list of numbers and a target sum, find all unique pairs that add up to that sum.
+
+num = [0,1,2,4,5,6]
+target = 5
+pairs = []
+seen = set()
+for n in num:
+	c = target - n
+	if c in seen:
+		pairs.append((min(n,c),max(n,c)))
+	seen.add(n)
+print(pairs)
